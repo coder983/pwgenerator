@@ -41,7 +41,7 @@ public class PwGeneratorController {
     @RequestMapping("/updatesc")
     public String updateSpecialCharacters(ModelMap model) {
 
-        return "specchars";
+        return "preparation";
     }
 
     @RequestMapping("/procsc")

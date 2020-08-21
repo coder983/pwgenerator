@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preparation Page</title>
+</head>
+<body>
+<H1>Andrew's Password Generator</H1>
+<form>
+    <table>
+        <tr>
+            <td>
+                <label for="input-specchars">Special Characters:</label>
+                <input id="input-specchars" name="firstname" placeholder="Text" th:field="${contact.firstname}" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="input-pwMinLen">Password Minimum Length:</label>
+                <input id="input-pwMinLen" name="firstname" placeholder="Text" th:field="${contact.firstname}" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="location.href='/';" value="Cancel" /></td>
+            <td><input type="reset" value="Reset"/></td>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
