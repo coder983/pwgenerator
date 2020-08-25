@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class PwGeneratorController {
 
-    @Autowired
-    PwGeneratorService service;
+    private final PwGeneratorService service;
+    private final NamesRepository namesRepository;
+    private final PasswordDataLoader loader;
 
-    @Autowired
-    NamesRepository namesRepository;
-
-    @Autowired
-    PasswordDataLoader loader;
+    public PwGeneratorController(PwGeneratorService service, NamesRepository namesRepository, PasswordDataLoader loader) {
+        this.service = service;
+        this.namesRepository = namesRepository;
+        this.loader = loader;
+    }
 
     StatusManager initializer = new StatusManager();
 
